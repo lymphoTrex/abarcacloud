@@ -1,0 +1,35 @@
+---
+title: "Título del estudio"
+author:
+  - name: "Nombre del autor"
+    affiliation: "Institución"
+abstract: |
+  Contexto, objetivo, métodos, resultados y conclusión. Completar con datos reales.
+keywords: ["palabra clave 1", "palabra clave 2"]
+bibliography: references.bib
+format:
+  html: default
+  docx: default
+  pdf: default
+number-sections: true
+---
+
+# Introducción
+
+Describe el problema, la brecha de conocimiento y el objetivo o hipótesis.
+
+# Métodos
+
+Especifica diseño, población, criterios, variables, fuentes de datos, análisis y aprobaciones éticas aplicables.
+
+# Resultados
+
+Presenta los hallazgos reales, con medidas de incertidumbre y tablas o figuras cuando correspondan.
+
+# Discusión
+
+Interpreta los resultados, compáralos con la literatura verificada, explica límites e implicaciones.
+
+# Conclusión
+
+Responde al objetivo sin exceder la evidencia presentada.
