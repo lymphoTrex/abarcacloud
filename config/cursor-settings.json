@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.rulers": [88],
+  "editor.minimap.enabled": false,
+  "files.autoSave": "onFocusChange",
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.Rproj.user": true,
+    "**/.DS_Store": true
+  },
+  "search.exclude": {
+    "**/.venv": true,
+    "**/node_modules": true
+  },
+  "python.analysis.typeCheckingMode": "basic"
+}
