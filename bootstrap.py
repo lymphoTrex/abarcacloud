@@ -47,20 +47,42 @@ def append_once(path, line, apply):
     write_if_changed(path, original + suffix + line + "\n", apply)
 
 
+def set_marked_line(path, line, apply):
+    original = path.read_text(encoding="utf-8") if path.exists() else ""
+    retained = [item for item in original.splitlines() if MARKER not in item]
+    content = "\n".join(retained).rstrip("\n")
+    if content:
+        content += "\n"
+    write_if_changed(path, content + line + "\n", apply)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--apply", action="store_true", help="aplicar los cambios")
+    parser.add_argument("--install-alli", action="store_true", help="instalar solo LABORATORIO ALLI en este dispositivo")
     args = parser.parse_args()
     home = Path.home()
     destination = home / ".config" / "entorno-gabriel"
-    for name in ("gitconfig.shared", "shell.sh", "Microsoft.PowerShell_profile.ps1", "alli-research.md"):
+    if args.install_alli:
+        names = ("alli-research.md",)
+    else:
+        names = ("gitconfig.shared", "shell.sh", "Microsoft.PowerShell_profile.ps1", "alli-research.md")
+    for name in names:
         write_if_changed(destination / name,
                          (ROOT / "config" / name).read_text(encoding="utf-8"),
-                         args.apply)
+                         args.apply or args.install_alli)
 
-    alli_line = ("Cuando Gabriel pida desarrollar investigación en medicina o biología celular, "
-                 "lee y aplica " + str(destination / "alli-research.md") + ". " + MARKER)
-    append_once(home / ".codex" / "AGENTS.md", alli_line, args.apply)
+    alli_line = ("Al iniciar cualquier trabajo científico, pregunta a Gabriel si desea activar "
+                 "LABORATORIO ALLI en este dispositivo ahora; si no está instalado, ofrece instalarlo "
+                 "desde https://github.com/lymphoTrex/abarcacloud con python3 bootstrap.py --install-alli "
+                 "(en Windows, py bootstrap.py --install-alli). Espera su respuesta antes de instalar o activar. "
+                 "Si acepta para investigación en medicina o biología celular, lee y aplica "
+                 + str(destination / "alli-research.md") + ". " + MARKER)
+    set_marked_line(home / ".codex" / "AGENTS.md", alli_line, args.apply or args.install_alli)
+
+    if args.install_alli:
+        print("LABORATORIO ALLI instalado para Codex en este dispositivo.")
+        return
 
     if os.name == "nt":
         profile = home / "Documents" / "PowerShell" / "Microsoft.PowerShell_profile.ps1"
