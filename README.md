@@ -31,6 +31,16 @@ Configuración portable para trabajar con **Python, R y Git** en Mac, Linux y Wi
 
 El instalador hace una copia de seguridad con marca de tiempo antes de editar un archivo existente. Es seguro repetirlo: no duplica las líneas que ya agregó. No instala software ni mueve tus proyectos.
 
+### LABORATORIO ALLI en cada dispositivo
+
+Al iniciar cualquier trabajo científico, Codex debe preguntarte si deseas **activar LABORATORIO ALLI en ese dispositivo en ese momento**. Si aceptas y aún no está instalado, puedes instalar únicamente esa configuración con:
+
+```sh
+python3 bootstrap.py --install-alli
+```
+
+En Windows usa `py bootstrap.py --install-alli`. El comando copia el protocolo local y actualiza `~/.codex/AGENTS.md` con una copia de seguridad; no instala el resto del entorno ni activa LABORATORIO ALLI para un trabajo sin tu respuesta. Para que Codex conozca esta regla en un dispositivo nuevo, abre una tarea dentro de este repositorio o instala esta configuración una vez. Un dispositivo sin el repositorio ni esta regla todavía no puede recibir la pregunta automáticamente.
+
 ## Qué contiene
 
 | Archivo | Uso |
@@ -41,6 +51,7 @@ El instalador hace una copia de seguridad con marca de tiempo antes de editar un
 | `config/Microsoft.PowerShell_profile.ps1` | Atajos equivalentes para PowerShell. |
 | `config/cursor-settings.json` | Preferencias sugeridas para Cursor o VS Code. |
 | `config/alli-research.md` | Protocolo LABORATORIO ALLI para investigación médica y de biología celular. |
+| `AGENTS.md` | Pregunta de activación al iniciar trabajo científico dentro del repositorio. |
 | `Brewfile` | Herramientas de terminal sugeridas para macOS con Homebrew. |
 | `.gitignore` | Bloquea credenciales y archivos locales comunes. |
 | `papers/` | Plantilla Quarto y flujo de referencias para artículos científicos. |
