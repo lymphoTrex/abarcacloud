@@ -40,6 +40,7 @@ El instalador hace una copia de seguridad con marca de tiempo antes de editar un
 | `config/shell.sh` | Atajos para Bash y Zsh; detecta herramientas opcionales. |
 | `config/Microsoft.PowerShell_profile.ps1` | Atajos equivalentes para PowerShell. |
 | `config/cursor-settings.json` | Preferencias sugeridas para Cursor o VS Code. |
+| `config/alli-research.md` | Protocolo LABORATORIO ALLI para investigación médica y de biología celular. |
 | `Brewfile` | Herramientas de terminal sugeridas para macOS con Homebrew. |
 | `.gitignore` | Bloquea credenciales y archivos locales comunes. |
 | `papers/` | Plantilla Quarto y flujo de referencias para artículos científicos. |
@@ -81,4 +82,4 @@ Clona el repositorio en cada equipo y vuelve a ejecutar el instalador después d
 
 ## Ajustar o deshacer
 
-Edita los archivos en `config/`, haz commit y ejecuta el instalador en cada equipo. El instalador conserva copias de seguridad `*.backup-AAAA...`. Para deshacer, elimina las líneas marcadas `# entorno-gabriel` del perfil de shell o PowerShell y la línea `include.path` correspondiente de `~/.gitconfig`; luego restaura una copia de seguridad si la necesitas.
+Edita los archivos en `config/`, haz commit y ejecuta el instalador en cada equipo. El instalador conserva copias de seguridad `*.backup-AAAA...`. Para deshacer, elimina las líneas marcadas `# entorno-gabriel` del perfil de shell o PowerShell y de `~/.codex/AGENTS.md`, y la línea `include.path` correspondiente de `~/.gitconfig`; luego restaura una copia de seguridad si la necesitas.
