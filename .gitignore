@@ -1,0 +1,25 @@
+# Credenciales y ajustes exclusivos de cada dispositivo
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*.p12
+*.pfx
+**/secrets.*
+**/credentials.*
+
+# Python, R y editores
+.venv/
+__pycache__/
+*.py[cod]
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+work/
