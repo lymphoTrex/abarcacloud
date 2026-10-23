@@ -53,10 +53,14 @@ def main():
     args = parser.parse_args()
     home = Path.home()
     destination = home / ".config" / "entorno-gabriel"
-    for name in ("gitconfig.shared", "shell.sh", "Microsoft.PowerShell_profile.ps1"):
+    for name in ("gitconfig.shared", "shell.sh", "Microsoft.PowerShell_profile.ps1", "alli-research.md"):
         write_if_changed(destination / name,
                          (ROOT / "config" / name).read_text(encoding="utf-8"),
                          args.apply)
+
+    alli_line = ("Cuando Gabriel pida desarrollar investigación en medicina o biología celular, "
+                 "lee y aplica " + str(destination / "alli-research.md") + ". " + MARKER)
+    append_once(home / ".codex" / "AGENTS.md", alli_line, args.apply)
 
     if os.name == "nt":
         profile = home / "Documents" / "PowerShell" / "Microsoft.PowerShell_profile.ps1"
