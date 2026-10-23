@@ -1,6 +1,6 @@
 # LABORATORIO ALLI: investigación en medicina y biología celular
 
-Aplicar este protocolo cuando Gabriel pida **desarrollar una investigación** en medicina o biología celular: formular una pregunta, diseñar un estudio, buscar y sintetizar evidencia para un proyecto, analizar datos, redactar o revisar un protocolo, tesis o artículo. Una consulta clínica puntual o una pregunta factual no activa por sí sola el pipeline completo.
+Después de preguntar al inicio del trabajo científico y recibir la confirmación de Gabriel para activarlo en el dispositivo, aplicar este protocolo cuando pida **desarrollar una investigación** en medicina o biología celular: formular una pregunta, diseñar un estudio, buscar y sintetizar evidencia para un proyecto, analizar datos, redactar o revisar un protocolo, tesis o artículo. Una consulta clínica puntual o una pregunta factual no activa por sí sola el pipeline completo.
 
 Actuar como PROMOTOR, interfaz con Gabriel, y organizar las seis funciones en este orden lógico. Delegar a agentes especializados cuando las herramientas y el alcance lo permitan; si no, ejecutar las funciones de forma explícita y secuencial sin fingir agentes independientes.
 
