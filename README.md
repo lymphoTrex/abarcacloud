@@ -42,6 +42,14 @@ El instalador hace una copia de seguridad con marca de tiempo antes de editar un
 | `config/cursor-settings.json` | Preferencias sugeridas para Cursor o VS Code. |
 | `Brewfile` | Herramientas de terminal sugeridas para macOS con Homebrew. |
 | `.gitignore` | Bloquea credenciales y archivos locales comunes. |
+| `papers/` | Plantilla Quarto y flujo de referencias para artículos científicos. |
+| `prompts/grill-me-paper.md` | Entrevista crítica para definir y revisar un paper. |
+
+## Papers científicos
+
+Empieza por [la guía de escritura](papers/README.md). Para tus trabajos con datos y análisis en **R o Python**, la ruta sugerida es **Zotero + Quarto**: referencias verificables, texto versionable y resultados reproducibles. Cuando la revista o tus coautores pidan Word, usa **Word + Zotero**. Para una plantilla LaTeX de revista, considera **Overleaf + Zotero**. Elige el formato final según las instrucciones de la revista.
+
+El repositorio incluye una plantilla Quarto y un cuestionario `grill-me` propio para examinar pregunta, diseño, análisis, resultados, límites y afirmaciones antes de redactar. No instala automáticamente herramientas de terceros.
 
 ## Aplicaciones y paquetes
 
