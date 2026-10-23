@@ -1,0 +1,11 @@
+[init]
+    defaultBranch = main
+[pull]
+    ff = only
+[fetch]
+    prune = true
+[alias]
+    st = status --short --branch
+    lg = log --graph --decorate --oneline -20
+    last = log -1 --stat
+    unstage = restore --staged --
