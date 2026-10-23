@@ -5,8 +5,8 @@ import argparse
 import datetime
 import os
 from pathlib import Path
+import shlex
 import shutil
-import subprocess
 import sys
 
 
@@ -60,10 +60,11 @@ def main():
 
     if os.name == "nt":
         profile = home / "Documents" / "PowerShell" / "Microsoft.PowerShell_profile.ps1"
-        source = ". " + str(destination / "Microsoft.PowerShell_profile.ps1") + " " + MARKER
+        script_path = str(destination / "Microsoft.PowerShell_profile.ps1").replace("'", "''")
+        source = ". '" + script_path + "' " + MARKER
         append_once(profile, source, args.apply)
     else:
-        source = ". " + str(destination / "shell.sh") + " " + MARKER
+        source = ". " + shlex.quote(str(destination / "shell.sh")) + " " + MARKER
         profiles = [p for p in (home / ".bash_profile", home / ".bashrc", home / ".zshrc") if p.exists()]
         if not profiles:
             profiles = [home / ".bashrc"]
